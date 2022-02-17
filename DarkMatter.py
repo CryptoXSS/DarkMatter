@@ -57,7 +57,7 @@ print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
 print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
 
 def send2attack():
-  for i in range(90000): #Poder Mágico
+  for i in range(70000): #Poder Mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
