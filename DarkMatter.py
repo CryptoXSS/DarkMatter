@@ -11,7 +11,7 @@ print("Sistema detectado: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 133000")
+    os.system("ulimit -n 130000")
   except Exception as e:
     print(e)
     print("No se pudo iniciar el script")
