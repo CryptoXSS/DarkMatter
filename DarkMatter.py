@@ -48,7 +48,12 @@ port = int(input("Port: "))
 url = f"https://{str(ip)}" 
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
-
+print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
 def send2attack():
   for i in range(500000): #Poder Mágico
     mp = multiprocessing.Process(target=attack)
