@@ -18,6 +18,13 @@ if sysOS == "Linux":
 else:
   print("Su sistema no es Linux, es posible que no pueda ejecutar este script en algunos sistemas")
 
+            print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+          print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+        print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+      print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+  print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+
 
 def randomip():
   randip = ".".join(str(random.randint(0, 255)) for _ in range(4))
@@ -49,12 +56,6 @@ url = f"http://{str(ip)}"
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
 
 def send2attack():
   for i in range(50000): #Poder Mágico
