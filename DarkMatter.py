@@ -62,5 +62,4 @@ def send3attack():
     print ('\x1b[6;30;42m' + 'o_O' + '\x1b[0m')
     print ('\x1b[6;30;42m' + 'o_O' + '\x1b[0m')
     print ('\x1b[6;30;42m' + 'o_O' + '\x1b[0m')
-    
- send3attack()
+    send3attack()
