@@ -57,7 +57,7 @@ def send2attack():
     mp.start() #Magic Starts
     
    send2attack()
-  if
+  
     print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
     print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
     print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
