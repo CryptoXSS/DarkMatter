@@ -56,11 +56,11 @@ def send3attack():
     mp.setDaemon = False
     mp.start() #Magic Starts
   
-    print ('\x1b[6;30;42m' + '99999999!' + '\x1b[0m')
-    print ('\x1b[6;30;42m' + '999999999!' + '\x1b[0m')
-    print ('\x1b[6;30;42m' + '9999999999!' + '\x1b[0m')
-    print ('\x1b[6;30;42m' + '99999999999!' + '\x1b[0m')
-    print ('\x1b[6;30;42m' + '999999999999!' + '\x1b[0m')
-    print ('\x1b[6;30;42m' + '9999999999999!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
     
 send3attack()
