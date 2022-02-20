@@ -4,9 +4,11 @@ from time import sleep
 import multiprocessing
 import random
 import platform
-http.client.FORBIDDEN
 
+from urllib.request import Request, urlopen
 
+req = Request('http://www.cmegroup.com/trading/products/#sortField=oi&sortAsc=false&venues=3&page=1&cleared=1&group=1', headers={'User-Agent': 'Mozilla/5.0'})
+webpage = urlopen(req).read()
 print("Detecting System...")
 sysOS = platform.system()
 print("Sistema detectado: ", sysOS)
