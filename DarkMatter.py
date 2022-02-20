@@ -14,11 +14,6 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
         file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "*"*(size-x), j, count))
         file.flush()
         file.write("\n")
-        bar.setStyleSheet("QProgressBar"
-                          "{"
-                          "background-color : lightblue;"
-                          "border : 1px"
-                          "}")
     show(0)
     for i, item in enumerate(it):
         yield item
