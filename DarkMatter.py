@@ -29,8 +29,7 @@ for i in progressbar(range(15), "Barra Util: ", 50):
 
 from urllib.request import Request, urlopen
 
-req = Request('http://www.google.com/', headers={'User-Agent': 'Mozilla/5.0'})
-webpage = urlopen(req).read()
+
 
 
 print("Detecting System...")
