@@ -4,7 +4,7 @@ from time import sleep
 import multiprocessing
 import random
 import platform
-import sys*
+import sys
 
 def progressbar(it, prefix="", size=60, file=sys.stdout):
     count = len(it)
