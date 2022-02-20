@@ -12,7 +12,6 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     def show(j):
         x = int(size*j/count) 
         file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "*"*(size-x), j, count))
-        color "a0"
         file.flush()
         file.write("\n")
     show(0)
@@ -23,7 +22,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     file.flush()
     
 import time
-
+<paper-button aria-label="" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">
 for i in progressbar(range(15), "Barra Util: ", 50):
     time.sleep(1.0)
     
