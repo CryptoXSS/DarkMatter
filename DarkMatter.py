@@ -26,7 +26,7 @@ import time
 for i in progressbar(range(10), "Barra Util: ", 40):
     time.spleep(0.1)
 for i in progressbar(range(20), "Barra Util: ", 50):   
-    time.sleep(1.0)
+    time.spleep(1.0)
     
     
 print("Detecting System...")
