@@ -25,7 +25,7 @@ import time
 
 for i in progressbar(range(15), "Barra Util: ", 50):
     time.sleep(1.0)
-if
+
 
 from urllib.request import Request, urlopen
 
