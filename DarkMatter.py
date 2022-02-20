@@ -5,7 +5,7 @@ import multiprocessing
 import random
 import platform
 http.client.FORBIDDEN
-meta charset="utf-8"
+coding utf-8
 
 print("Detecting System...")
 sysOS = platform.system()
