@@ -5,34 +5,6 @@ import multiprocessing
 import random
 import platform
 
-import sys
-
-def progressbar(it, prefix="", size=60, file=sys.stdout):
-    count = len(it)
-    def show(j):
-        x = int(size*j/count)
-        file.write("%s[%s%s] %i/%i\r" % (prefix, "="*x, "*"*(size-x), j, count))
-        file.flush()
-        file.write("\n")
-    show(0)
-    for i, item in enumerate(it):
-        yield item
-        show(i+1)
-        file.write("\n")
-    file.flush()
-    
-import time
-
-for i in progressbar(range(15), "Barra Util: ", 50):
-    time.sleep(1.0)
-    
-
-from urllib.request import Request, urlopen
-
-req = Request('http://www.google.com/', headers={'User-Agent': 'Mozilla/5.0'})
-webpage = urlopen(req).read()
-
-
 
 print("Detecting System...")
 sysOS = platform.system()
