@@ -11,7 +11,11 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     count = len(it)
     def show(j):
         x = int(size*j/count) 
-        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "*"*(size-x), j, count))
+        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "1"*(size-x), j, count))
+        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "2"*(size-x), j, count))
+        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "3"*(size-x), j, count))
+        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "4"*(size-x), j, count))
+        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "5"*(size-x), j, count))
         file.flush()
         file.write("\n")
     show(0)
@@ -25,8 +29,6 @@ import time
 
 for i in progressbar(range(10), "Barra Util: ", 40):
     time.sleep(0.1)
-for i in progressbar(range(20), "Barra Util: ", 50):   
-    time.sleep(1.0)
     
     
 print("Detecting System...")
