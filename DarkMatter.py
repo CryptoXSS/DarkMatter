@@ -11,11 +11,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     count = len(it)
     def show(j):
         x = int(size*j/count) 
-        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "1"*(size-x), j, count))
-        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "2"*(size-x), j, count))
-        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "3"*(size-x), j, count))
-        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "4"*(size-x), j, count))
-        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "5"*(size-x), j, count))
+        file.write("%s[%s%s] %i/%i\r" % (prefix,  "="*x, "~"*(size-x), j, count))
         file.flush()
         file.write("\n")
     show(0)
