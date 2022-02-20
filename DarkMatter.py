@@ -20,7 +20,7 @@ else:
   print("Su sistema no es Linux, es posible que no pueda ejecutar este script en algunos sistemas")
   
 def randomip():
-  randip = ".".join(str(random.randint(0, 255)) for _ in range(5))
+  randip = ".".join(str(random.randint(0, 255)) for _ in range(4))
   return randip
 
 
@@ -56,5 +56,5 @@ def send3attack():
     mp.setDaemon = False
     mp.start() #Magic Starts
     
-    1
+    
 send3attack()
