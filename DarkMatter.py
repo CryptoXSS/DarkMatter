@@ -10,7 +10,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     count = len(it)
     def show(j):
         x = int(size*j/count)
-        file.write("%s[%s%s] %i/%i\r" % (prefix, "#"*x, "."*(size-x), j, count))
+        file.write("%s[%s%s] %i/%i\r" % (prefix, "="*x, "*"*(size-x), j, count))
         file.flush()
         file.write("\n")
     show(0)
@@ -81,7 +81,7 @@ def send3attack():
     mp.start() #Magic Starts
     
   print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-   print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
-   print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+  print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+  print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
     
 send3attack()
