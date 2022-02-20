@@ -24,7 +24,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
 import time
 
 for i in progressbar(range(10), "Barra Util: ", 40):
-    time.sleep(0.1)
+    time.sleep(1.0)
     
     
 print("Detecting System...")
