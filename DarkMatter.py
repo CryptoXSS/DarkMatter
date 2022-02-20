@@ -66,7 +66,7 @@ def attack():
       pass
 
 print("Bienvenido a DarkMatter DDoS\n")
-ip = input("IP/Domain: ")
+ip = input("IPV4/Domain: ")
 port = int(input("Port: "))
 url = f"http://{str(ip)}"
 print("[>>>] RS-28 Sarmat [<<<]")
