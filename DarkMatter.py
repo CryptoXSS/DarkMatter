@@ -5,7 +5,7 @@ import multiprocessing
 import random
 import platform
 
-import sys print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
+import sys 
 
 def progressbar(it, prefix="", size=60, file=sys.stdout):
     count = len(it)
