@@ -4,6 +4,7 @@ from time import sleep
 import multiprocessing
 import random
 import platform
+
 import sys
 
 def progressbar(it, prefix="", size=60, file=sys.stdout):
@@ -24,6 +25,7 @@ import time
 
 for i in progressbar(range(15), "Barra Util: ", 50):
     time.sleep(1.0)
+else
 
 from urllib.request import Request, urlopen
 
@@ -81,5 +83,5 @@ def send3attack():
     mp.setDaemon = False
     mp.start() #Magic Starts
     
-    
+    1
 send3attack()
