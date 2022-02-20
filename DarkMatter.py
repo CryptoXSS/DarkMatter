@@ -22,14 +22,16 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(15), "Barra Util: ", 40):
-    time.sleep(0.1)
+for i in progressbar(range(15), "Barra Util: ", 50):
+    time.sleep(1.0)
 
 from urllib.request import Request, urlopen
 
 req = Request('http://www.google.com/', headers={'User-Agent': 'Mozilla/5.0'})
 webpage = urlopen(req).read()
-
+}
+if 
+{
 print("Detecting System...")
 sysOS = platform.system()
 print("Sistema detectado: ", sysOS)
