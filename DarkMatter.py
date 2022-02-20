@@ -10,7 +10,7 @@ from urllib.request import Request, urlopen
 req = Request('http://50.7.198.146/', headers={'User-Agent': 'Mozilla/5.0'})
 webpage = urlopen(req).read()
 
-else
+if
 
 print("Detecting System...")
 sysOS = platform.system()
