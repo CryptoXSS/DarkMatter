@@ -22,7 +22,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     file.flush()
     
 import time
-<paper-button aria-label="" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">
+paper-button aria-label="" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false"
 for i in progressbar(range(15), "Barra Util: ", 50):
     time.sleep(1.0)
     
