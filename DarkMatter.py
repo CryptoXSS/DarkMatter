@@ -4,7 +4,10 @@ from time import sleep
 import multiprocessing
 import random
 import platform
-
+import socks
+import threading
+import re
+import urllib.request
 import sys 
 
 def progressbar(it, prefix="", size=60, file=sys.stdout):
@@ -66,9 +69,22 @@ def attack():
       pass
 
 print("Bienvenido a DarkMatter DDoS\n")
-ip = input("IPV4/Domain: ")
-port = int(input("Port: "))
-url = f"https://{str(ip)}"
+url = input("\nInsert URL/IP: ").strip()
+
+		if url == "":
+			print ("Please enter the url.")
+			starturl()
+
+		try:
+			if url[0]+url[1]+url[2]+url[3] == "www.":
+				url = "http://" + url
+			elif url[0]+url[1]+url[2]+url[3] == "http":
+				pass
+			else:
+				url = "http://" + url
+		except:
+			print("You mistyped, try again.")
+			starturl()
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
