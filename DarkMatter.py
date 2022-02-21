@@ -94,7 +94,7 @@ def begin():
 	elif choice6 == "enter": #loool
 		loop()
 	else:
-		exit(0)
+		sleep(1)
 
 def loop():
 	global threads
@@ -102,7 +102,7 @@ def loop():
 	global connection
 	global go
 	global x
-	sleep(1
+	
 
 	
 def send2attack():
