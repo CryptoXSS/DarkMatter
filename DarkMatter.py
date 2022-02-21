@@ -23,7 +23,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(100), "Barra Util: ", 40):
+for i in progressbar(range(10), "Barra Util: ", 40):
     time.sleep(0.3)
     
     
@@ -68,7 +68,7 @@ def attack():
 print("Bienvenido a DarkMatter DDoS\n")
 url = input("IPV4/Domain: ")
 port = int(input("Port: "))
-url = f"https://{str(host)}"
+url = f"https://{str(url)}"
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
