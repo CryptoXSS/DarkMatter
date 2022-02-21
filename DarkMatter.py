@@ -74,7 +74,7 @@ ip = input("IP/Domain: ")
 port = int(input("Port: "))
 url = f"http://{str(ip)}"
 print("[>>>] Starting the attack [<<<]")
-sleep(0)
+
 
 def multiplication():
 	global multiple
