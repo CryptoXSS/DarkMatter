@@ -105,7 +105,7 @@ def loop():
 
 def send2attack():
   for i in range(5000): #Magic Power
-    mp = multiplication.Process(target=attack)
+    mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
 
