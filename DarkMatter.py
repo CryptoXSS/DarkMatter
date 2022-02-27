@@ -52,8 +52,8 @@ def randomip():
 
 
 def attack():
-  Upgrade: websocket\r\n
-  Connection: Upgrade\r\n
+  Upgrade = "websocket\r\n"
+  Connection = "Upgrade\r\n"
   Host = "192.168.56.103:8080\r\n"
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
