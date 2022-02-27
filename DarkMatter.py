@@ -85,3 +85,4 @@ def send2attack():
 
     
 send2attack()
+exit("Enter")
