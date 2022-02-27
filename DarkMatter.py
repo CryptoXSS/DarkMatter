@@ -27,8 +27,8 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(10), "Barra Util: ", 40):
-    time.sleep(0.2)
+for i in progressbar(range(100), "Barra Util: ", 40):
+    time.sleep(0.3)
     
     
 print ('\x1b[6;30;42m' + 'Success!' + '\x1b[0m')
