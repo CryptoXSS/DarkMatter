@@ -98,18 +98,13 @@ for i in progressbar(range(30), "Loading: ", 40):
 	
 def send3attack():
   for i in range(50000): #Poder mágico
-    import time
-    for i in progressbar(range(30), "Loading: ", 40):
-    time.sleep(0.5)
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
-    sleep(2)
-	
-    
-send3attack()
+	  
+time.sleep(0.5)
 
-sleep(3)
+sleep(2)
 
 def progressbar(it, prefix="", size=60, file=sys.stdout):
     count = len(it)
