@@ -94,7 +94,8 @@ import time
 
 for i in progressbar(range(30), "Loading: ", 40):
     time.sleep(0.3)
-
+ 
+sleep(2)
 	
 def send3attack():
   for i in range(50000): #Poder mágico
