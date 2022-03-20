@@ -93,8 +93,7 @@ def send3attack():
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
-    sleep(1.5) 
-   <-- print("Eliminar Brutal ataque") -->
+    sleep(1.5) print("Eliminar Brutal ataque")
 	
 send3attack()
 exit(0)
