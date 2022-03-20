@@ -87,13 +87,12 @@ bar2.finish()
 
 
 def send3attack():
-  for i in range(50000): #Poder mágico
+  for i in range(60000): #Poder mágico
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
-    mp.start() #Magic Starts
-
+    mp.start()
+    sleep(1.05)
     
 send3attack()
-exit("Enter")
 
 exit(1)
