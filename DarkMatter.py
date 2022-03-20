@@ -91,11 +91,11 @@ def send3attack():
     mp.setDaemon = True
     mp.start():
     sleep(2.3)
-    mp.start()
+    mp.setDaemon = True
     sleep(3.4)
-    mp.start():
+    mp.setDaemon = True
     sleep(4.5)
-    mp.start()
+    mp.setDaemon = True
     sleep(5.6)
 	
  send3attack()
