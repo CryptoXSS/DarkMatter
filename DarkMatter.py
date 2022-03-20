@@ -91,15 +91,8 @@ def send3attack():
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start()
-    sleep(0.1)
-    mp = multiprocessing.Process(target=attack)
-    mp.setDaemon = False
-    mp.start()
-    sleep(1.0)
-    mp = multiprocessing.Process(target=attack)
-    mp.setDaemon = False
-    mp.start()
-    sleep(5.0)
+    time.sleep(random.uniform(0, 0.5))
+   
     
 send3attack()
 
