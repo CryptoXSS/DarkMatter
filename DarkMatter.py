@@ -87,12 +87,15 @@ bar2.finish()
 
 
 def send3attack():
-  for i in range(60000): #Poder mágico
+  for i in range(60000): 
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start()
-    time.sleep(random.uniform(0, 0.5))
-   
+    time.sleep(random.uniform(0, 0.5)
+    sleep(0.5)
+    time.sleep(random.uniform(0, 0.5)
+   #time.sleep random package- sleep(0.1) in brutal attack
+               
     
 send3attack()
 
