@@ -92,7 +92,6 @@ def send3attack():
     mp.setDaemon = False
     mp.start()
     sleep(2.3)
-
     
  send3attack()
 exit(1)
