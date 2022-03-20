@@ -8,7 +8,7 @@ import socks
 import threading
 import re
 import urllib.request
-
+import progress
 import sys 
 
 def progressbar(it, prefix="", size=60, file=sys.stdout):
