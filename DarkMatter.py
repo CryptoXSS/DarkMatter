@@ -27,7 +27,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(100), "Loading: ", 40):
+for i in progressbar(range(30), "Loading: ", 40):
     time.sleep(0.3)
     
     
@@ -92,7 +92,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(100), "Loading: ", 40):
+for i in progressbar(range(30), "Loading: ", 40):
     time.sleep(0.3)
 
 	
