@@ -92,8 +92,6 @@ def send3attack():
     mp.setDaemon = False
     mp.start()
     time.sleep(random.uniform(0, 0.5)
-    sleep(0.5)
-    time.sleep(random.uniform(0, 0.5)
    #time.sleep random package- sleep(0.1) in brutal attack
                
     
