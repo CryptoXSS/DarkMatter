@@ -27,7 +27,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(30), "Loading: ", 40):
+for i in progressbar(range(100), "Loading: ", 40):
     time.sleep(0.3)
     
     
@@ -91,7 +91,7 @@ def send3attack():
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() 
-    sleep(2.0)
+    sleep(3.0)
     
 send3attack()
 
