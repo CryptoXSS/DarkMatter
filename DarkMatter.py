@@ -93,19 +93,8 @@ def send4attack():
     mp.start() 
     sleep(1.0)
     
-    sleep(8.0)
+    sleep(1.0)
     
-    sleep(0.1)
-    
-    sleep(8.0)
-    
-    sleep(0.1)
-    
-    sleep(0.1)
-   
-    sleep(8.0)
-    
-    sleep(0.1)
     
     
 send4attack()
