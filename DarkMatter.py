@@ -91,7 +91,13 @@ def send4attack():
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = True
     mp.start() 
-    sleep(2.0) + sleep(4.0) + sleep(5.0) + sleep(9.0)
+    sleep(1.0)
+    sleep(8.0)
+    sleep(1.0)
+    sleep(8.0)
+    sleep(8.0)
+    sleep(1.0)
+    sleep(3.0)
     
     
 send4attack()
