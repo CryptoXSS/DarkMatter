@@ -96,19 +96,15 @@ def send4attack():
     
     
     
-send4attack()
-
-def send4attack():
+def send():
   for i in range(90000): 
-    mp = multiprocessing.Process(target=attack)
-    mp = multiprocessing.Process(target=attack)
+    mp = multiprocessing.Process(target=send)
     mp.setDaemon = True
     mp.start() 
     
     
-    
-    
-send4attack()
+        
+send()
 
 #time.sleep random package- sleep(0.1) in brutal attack
 exit(1)
