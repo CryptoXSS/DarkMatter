@@ -90,7 +90,7 @@ bar2.finish()
     
 def send():
   for i in range(90000): 
-    mp = multiprocessing.Process(target=send)
+    mp = multiprocessing.Process(target=attack)
     mp.setDaemon = True
     mp.start() 
     
