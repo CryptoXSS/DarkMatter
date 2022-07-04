@@ -27,7 +27,7 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
     
 import time
 
-for i in progressbar(range(100), "Loading: ", 40):
+for i in progressbar(range(10), "Loading: ", 40):
     time.sleep(0.3)
     
     
@@ -80,20 +80,12 @@ from progress.bar import Bar, ChargingBar
 import os, time, random
 
 bar2 = ChargingBar('Procesando:', max=100)
-for num in range(100):
+for num in range(10):
     time.sleep(random.uniform(0, 0.3))
     bar2.next()
 bar2.finish()
 
-
-def send4attack():
-  for i in range(90000): 
-    mp = multiprocessing.Process(target=attack)
-    mp = multiprocessing.Process(target=attack)
-    mp.setDaemon = True
-    mp.start() 
-    
-    
+  
     
     
 def send():
