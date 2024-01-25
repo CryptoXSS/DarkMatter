@@ -93,6 +93,7 @@ def send():
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = True
     mp.start() 
+    sleep(7.0)
     
     
         
